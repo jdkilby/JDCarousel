@@ -1,0 +1,204 @@
+/**
+ * CSS for JDCarousel
+ * For more information, visit jdkilby.com.
+ */
+
+.jdcarousel {
+    visibility: visible;
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    padding: 5px;
+}
+
+
+.jdcarousel img {
+    border: 0.25em solid black;
+
+    opacity: 1;
+
+    display: block;
+    position: absolute;
+    visibility: hidden;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    -webkit-transition: left 1s, transform 1s;
+    -moz-transition: left 1s, transform 1s;
+    -ms-transition: left 1s, transform 1s;
+    -o-transition: left 1s, transform 1s;
+    transition: left 1s, transform 1s;
+}
+
+.jdcarousel img.hidden-image-right {
+    visibility: hidden;
+    -webkit-transform: scale(0) translateX(-100%);
+    -moz-transform: scale(0) translateX(-100%);
+    -ms-transform: scale(0) translateX(-100%);
+    -o-transform: scale(0) translateX(-100%);
+    transform: scale(0) translateX(-100%);
+}
+
+.jdcarousel img.hidden-image-neutral {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.jdcarousel img.hidden-image-left {
+    visibility: hidden;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.jdcarousel img.left-of-view {
+    visibility: visible;
+    z-index: 0;
+    left: 17.5%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.jdcarousel img.left-preview {
+    visibility: visible;
+    z-index: 1;
+    left: 17.5%;
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    transform: scale(0.25);
+}
+
+.jdcarousel img.active-image {
+    visibility: visible;
+    z-index: 2;
+    left: 50%;
+}
+
+.jdcarousel img.right-preview {
+    visibility: visible;
+    z-index: 1;
+    left: 82.5%;
+    -webkit-transform: scale(0.25) translateX(-100%);
+    -moz-transform: scale(0.25) translateX(-100%);
+    -ms-transform: scale(0.25) translateX(-100%);
+    -o-transform: scale(0.25) translateX(-100%);
+    transform: scale(0.25) translateX(-100%);
+}
+
+.jdcarousel img.right-of-view {
+    visibility: visible;
+    z-index: 0;
+    left: 82.5%;
+    -webkit-transform: scale(0) translateX(-100%);
+    -moz-transform: scale(0) translateX(-100%);
+    -ms-transform: scale(0) translateX(-100%);
+    -o-transform: scale(0) translateX(-100%);
+    transform: scale(0) translateX(-100%);
+}
+
+.jdcarousel img.left-of-view.imageInit,
+.jdcarousel img.left-preview.imageInit,
+.jdcarousel img.active-image.imageInit,
+.jdcarousel img.right-preview.imageInit,
+.jdcarousel img.right-of-view.imageInit {
+    visibility: hidden;
+    -webkit-transition: left 0.1s, transform 0.1s;
+    -moz-transition: left 0.1s, transform 0.1s;
+    -ms-transition: left 0.1s, transform 0.1s;
+    -o-transition: left 0.1s, transform 0.1s;
+    transition: left 0.1s, transform 0.1s;
+}
+
+.jdcarousel-button {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    top: 50%;
+    z-index: 100;
+    -webkit-transition: opacity 0.1s;
+    -moz-transition: opacity 0.1s;
+    -ms-transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
+    transition: opacity 0.1s;
+}
+
+.jdcarousel-button.inactiveButton {
+    opacity: 0.25;
+}
+
+.jdcarousel-button-left {
+    left: 0%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.jdcarousel-button-right {
+    left: 100%;
+    -webkit-transform: translate(-100%, -50%);
+    -moz-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+    -o-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+}
+
+@media ( max-width: 750px ) {
+    .jdcarousel {
+        margin-bottom: 5em;
+    }
+
+    .jdcarousel-button {
+        top: 100%;
+    }
+
+    .jdcarousel-button-left {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+
+    .jdcarousel-button-right {
+        -webkit-transform: translate(-100%, 0%);
+        -moz-transform: translate(-100%, 0%);
+        -ms-transform: translate(-100%, 0%);
+        -o-transform: translate(-100%, 0%);
+        transform: translate(-100%, 0%);
+    }
+}
