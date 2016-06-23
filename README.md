@@ -10,7 +10,7 @@ Using it has several requirements:
 - A copy of [jdutils](https://github.com/jdkilby/JDUtils), which is included but also available via my [GitHub page](https://github.com/jdkilby).
 - Include the jdcarousel.css file (in the css folder) and the jdcarousel.js (in the js folder) in your HTML.
 
-To use, simply create an empty elment like a <div> and give it a unique ID (as ID's should be). After the DOM has loaded, call `JDCAROUSEL.create` with three arguments:
+To use, simply create an empty elment like a `<div>` and give it a unique ID (as ID's should be). After the DOM has loaded, call `JDCAROUSEL.create` with three arguments:
 
 - Argument #1 is the element ID that will contain the carousel.
 - Argument #2 is an array of strings with the src attributes for the images.
